@@ -1,12 +1,9 @@
 // External Import
 import dotenv from "dotenv";
-import express from "express";
 
 // Internal Import
+import { app } from "./app.js";
 import connectDB from "./db/index.js";
-
-// Create Express App
-const app = express();
 
 // config dotenv
 dotenv.config({
@@ -14,23 +11,17 @@ dotenv.config({
 });
 
 // Database Connection
-connectDB();
-
-/* (async () => {
-  try {
-    await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
-
+connectDB()
+  .then(() => {
     app.on("error", (error) => {
-      console.error("Error: ", error);
+      console.log("Error: ", error);
       throw error;
     });
 
-    app.listen(process.env.PORT, () => {
-      console.log(`App listening on port $${process.env.PORT}`);
+    app.listen(process.env.PORT || 3000, () => {
+      console.log(`Server is running on port ${process.env.PORT}`);
     });
-  } catch (error) {
-    console.error("ERROR: ", error);
-    throw err;
-  }
-})();
- */
+  })
+  .catch((error) => {
+    console.log("MONGODB connection failed", error);
+  });
