@@ -2,13 +2,18 @@
 import { Router } from "express";
 
 // Internal Import
-import { registerUser } from "../controllers/user.controller.js";
+import {
+  loginUser,
+  logoutUser,
+  registerUser,
+} from "../controllers/user.controller.js";
+import { verifyJWT } from "../middlewares/auth.middlwarw.js";
 import { upload } from "../middlewares/multer.middleware.js";
 
 // Create Router
 const router = Router();
 
-// route
+// REGISTER ROUTE
 router.route("/register").post(
   upload.fields([
     {
@@ -22,6 +27,12 @@ router.route("/register").post(
   ]),
   registerUser
 );
+
+// LOGIN ROUTE
+router.route("/login").post(loginUser);
+
+// SECURED ROUTES
+router.route("/logout").post(verifyJWT, logoutUser);
 
 // Export Router
 export default router;
