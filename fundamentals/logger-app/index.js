@@ -3,9 +3,13 @@ const fs = require("fs");
 
 const inputArguments = process.argv.slice(2);
 
-const text = inputArguments.join(" ");
+const text = inputArguments.join(" ").concat("\n");
 
-if (!text) {
+const timeStamp = new Date().toISOString();
+
+const message = `${text}- ${timeStamp} \n`;
+
+if (!message) {
   console.log("please provide a message to log");
   console.log("example: node index.js hello world");
   process.exit(1);
@@ -13,6 +17,6 @@ if (!text) {
 
 const filePath = path.join(__dirname, "log.txt");
 
-fs.appendFile(filePath, text, { encoding: "utf-8" }, () => {
+fs.appendFile(filePath, message, { encoding: "utf-8" }, () => {
   console.log("You log added successfully!!!");
 });
