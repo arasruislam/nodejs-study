@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Ashraful Alam",
+    "email": "ashraful@example.com",
+    "role": "WordPress Developer",
+    "skills": [
+      "Elementor",
+      "Kajabi",
+      "GrooveFunnels"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "email": "nusrat@example.com",
+    "role": "UI/UX Designer",
+    "skills": [
+      "Figma",
+      "Sketch",
+      "Adobe XD"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Rakib Hasan",
+    "email": "rakib@example.com",
+    "role": "Frontend Developer",
+    "skills": [
+      "React",
+      "Next.js",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Tanvir Rahman",
+    "email": "tanvir@example.com",
+    "role": "Backend Developer",
+    "skills": [
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Adha",
+    "email": "adha@example.com",
+    "role": "Backend Developer",
+    "skills": [
+      "Node.js",
+      "Express",
+      "Postgraysql"
+    ],
+    "createdAt": "7/3/2025, 1:21:56 AM"
+  }
+]
