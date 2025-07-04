@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Welcome to My Blog",
+    "body": "This is the first post on my blog. Stay tuned for more updates!"
+  },
+  {
+    "title": "About Me",
+    "body": "I'm a web developer who loves working with WordPress and modern frontend tools."
+  },
+  {
+    "title": "Latest Project Update",
+    "body": "Just launched a new landing page with smooth scroll animation and Elementor!"
+  },
+  {
+    "title": "Tips for WordPress Speed Optimization",
+    "body": "Use caching plugins, optimize images, and limit the number of plugins for better performance."
+  },
+  {
+    "title": "Contact Me",
+    "body": "Feel free to reach out via the contact form or email for any project inquiries."
+  }
+]
